@@ -1,6 +1,6 @@
 package rejonson
 
-import "github.com/go-redis/redis"
+import "github.com/go-redis/redis/v8"
 
 type redisProcessor struct {
 	Process func(cmd redis.Cmder) error

@@ -3,9 +3,10 @@ package rejonson_test
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/KromDaniel/rejonson"
-	"github.com/go-redis/redis"
 	"time"
+
+	"github.com/dxtrleague/rejonson"
+	"github.com/go-redis/redis/v8"
 )
 
 func init() {
