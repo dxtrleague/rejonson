@@ -20,13 +20,13 @@ Redis rejson extension built upon [go-redis](https://github.com/go-redis/redis)
 ### Install
 
 ```shell
-go get github.com/KromDaniel/rejonson
+go get github.com/dxtrleague/rejonson
 ```
 
 ### Import
 
 ```go
-import "github.com/KromDaniel/rejonson"
+import "github.com/dxtrleague/rejonson"
 ```
 
 ### Extend Client 
