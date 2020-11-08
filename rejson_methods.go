@@ -76,7 +76,7 @@ func jsonStrLenExecute(ctx context.Context, c *redisProcessor, args ...interface
 
 func jsonArrAppendExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
 	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.ARRAPPEND", args)...)
-	_ = c.Process(cmd)
+	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
