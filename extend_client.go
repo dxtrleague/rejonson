@@ -1,9 +1,13 @@
 package rejonson
 
-import "github.com/go-redis/redis/v8"
+import (
+	"context"
+
+	"github.com/go-redis/redis/v8"
+)
 
 type redisProcessor struct {
-	Process func(cmd redis.Cmder) error
+	Process func(ctx context.Context, cmd redis.Cmder) error
 }
 
 /*
