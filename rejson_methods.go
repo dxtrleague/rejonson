@@ -86,7 +86,7 @@ func jsoArrIndexExecute(ctx context.Context, c *redisProcessor, args ...interfac
 	return cmd
 }
 
-func jsonArrInsertExecute(c *redisProcessor, args ...interface{}) *redis.IntCmd {
+func jsonArrInsertExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
 	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.ARRINSERT", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
