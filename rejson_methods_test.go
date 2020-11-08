@@ -439,7 +439,7 @@ func TestClient_Pipeline(t *testing.T) {
 		assert.Equal(t, 0, int(delRes))
 	}
 
-	_, err = pipeline.Exec()
+	_, err = pipeline.Exec(context.Background())
 	if !assert.NoError(t, err) {
 		return
 	}

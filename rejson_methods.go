@@ -21,103 +21,103 @@ func concatWithCmd(cmdName string, args []interface{}) []interface{} {
 }
 
 func jsonDelExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.DEL", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.DEL", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonGetExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.StringCmd {
-	cmd := redis.NewStringCmd(concatWithCmd("JSON.GET", args)...)
+	cmd := redis.NewStringCmd(ctx, concatWithCmd("JSON.GET", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonSetExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.StatusCmd {
-	cmd := redis.NewStatusCmd(concatWithCmd("JSON.SET", args)...)
+	cmd := redis.NewStatusCmd(ctx, concatWithCmd("JSON.SET", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonMGetExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.StringSliceCmd {
-	cmd := redis.NewStringSliceCmd(concatWithCmd("JSON.MGET", args)...)
+	cmd := redis.NewStringSliceCmd(ctx, concatWithCmd("JSON.MGET", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonTypeExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.StringCmd {
-	cmd := redis.NewStringCmd(concatWithCmd("JSON.TYPE", args)...)
+	cmd := redis.NewStringCmd(ctx, concatWithCmd("JSON.TYPE", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonNumIncrByExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.StringCmd {
-	cmd := redis.NewStringCmd(concatWithCmd("JSON.NUMINCRBY", args)...)
+	cmd := redis.NewStringCmd(ctx, concatWithCmd("JSON.NUMINCRBY", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonNumMultByExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.StringCmd {
-	cmd := redis.NewStringCmd(concatWithCmd("JSON.NUMMULTBY", args)...)
+	cmd := redis.NewStringCmd(ctx, concatWithCmd("JSON.NUMMULTBY", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonStrAppendExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.STRAPPEND", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.STRAPPEND", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonStrLenExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.STRLEN", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.STRLEN", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonArrAppendExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.ARRAPPEND", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.ARRAPPEND", args)...)
 	_ = c.Process(cmd)
 	return cmd
 }
 
 func jsoArrIndexExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.ARRINDEX", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.ARRINDEX", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonArrInsertExecute(c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.ARRINSERT", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.ARRINSERT", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonArrLenExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.ARRLEN", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.ARRLEN", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonArrPopExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.StringCmd {
-	cmd := redis.NewStringCmd(concatWithCmd("JSON.ARRPOP", args)...)
+	cmd := redis.NewStringCmd(ctx, concatWithCmd("JSON.ARRPOP", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonArrTrimExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.ARRTRIM", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.ARRTRIM", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonObjKeysExecute(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.StringSliceCmd {
-	cmd := redis.NewStringSliceCmd(concatWithCmd("JSON.OBJKEYS", args)...)
+	cmd := redis.NewStringSliceCmd(ctx, concatWithCmd("JSON.OBJKEYS", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
 
 func jsonObjLen(ctx context.Context, c *redisProcessor, args ...interface{}) *redis.IntCmd {
-	cmd := redis.NewIntCmd(concatWithCmd("JSON.OBJLEN", args)...)
+	cmd := redis.NewIntCmd(ctx, concatWithCmd("JSON.OBJLEN", args)...)
 	_ = c.Process(ctx, cmd)
 	return cmd
 }
